@@ -18,7 +18,7 @@
     font-size:large;
 }
 body{
-    background-color: transparent;
+    background-color: white;
 }
     </style>
 </head>
@@ -36,6 +36,9 @@ body{
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
+  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("uuuu/MM/dd");
+  LocalDate localDate = LocalDate.now();
+  System.out.println(dtf.format(localDate));
     
     var today = new Date();
     var hrs = today.getHours();
