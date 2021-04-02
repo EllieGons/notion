@@ -1,13 +1,13 @@
 <html> 
 <head>
-    <title>Date Widget Notion</title> 
+    <title>Greeting Message</title> 
     <style>
 #lbl {
-    font-family: monospace;
+    font-family: courier;
     font-size: xx-large;
     color: #ff5757;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: transparent;
     text-align: center;
     line-height: 1.5;
     height:85%
@@ -17,19 +17,17 @@
 #date{
     font-size:large;
 }
+body{
+    background-color: white;
+}
+    </style>
+</head>
 <body>
+    <div id="lbl"></div>
+</body>
 
-    <div class="calendar">
-      <div class="calendar-body">
-        <span class="month-name">Month</span>
-        <span class="day-name">Day</span>
-        <span class="date-number">00</span>
-        <span class="year">0000</span>
-      </div>
-    </div>
-
-    <script type="text/javascript">
-    const dayNumber = new Date().getDate();
+<script>
+   const dayNumber = new Date().getDate();
     const year = new Date().getFullYear();
     const dayName = new Date().toLocaleString("default", {weekday: "long"});
     const monthName = new Date().toLocaleString("default", {month: "long"});
@@ -38,25 +36,6 @@
     document.querySelector(".day-name").innerHTML = dayName;
     document.querySelector(".date-number").innerHTML = dayNumber;
     document.querySelector(".year").innerHTML = year;
-    </script>
-
-  </body>
-
-<script>
-    var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
-
-    
-    var today = new Date();
-    var hrs = today.getHours();
-    var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
 
     var greet;
 
