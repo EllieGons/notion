@@ -1,6 +1,34 @@
-const today = new Date ();
-const yyyy = today.getFullYear ();
-const mm = today.getMonth () +1;
-const dd = today.getDate();
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Glassmorphism Calendar Card UI Design - HTML, CSS & Javascript</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-console.log('${dd} -${mm}-${yyyy}'); // 9/9/2020
+    <div class="calendar">
+      <div class="calendar-body">
+        <span class="month-name">Month</span>
+        <span class="day-name">Day</span>
+        <span class="date-number">00</span>
+        <span class="year">0000</span>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    const dayNumber = new Date().getDate();
+    const year = new Date().getFullYear();
+    const dayName = new Date().toLocaleString("default", {weekday: "long"});
+    const monthName = new Date().toLocaleString("default", {month: "long"});
+
+    document.querySelector(".month-name").innerHTML = monthName;
+    document.querySelector(".day-name").innerHTML = dayName;
+    document.querySelector(".date-number").innerHTML = dayNumber;
+    document.querySelector(".year").innerHTML = year;
+    </script>
+
+  </body>
+</html>
+      
