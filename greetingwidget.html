@@ -1,33 +1,14 @@
-<html> 
-<head>
-    <title>Greeting Message</title> 
-    <style>
-#lbl {
-    font-family: courier;
-    font-size: xx-large;
-    color: #ff5757;
-    padding: 5px;
-    border: transparent;
-    text-align: center;
-    line-height: 1.5;
-    height:85%
+ <div class="calendar">
+      <div class="calendar-body">
+        <span class="month-name">Month</span>
+        <span class="day-name">Day</span>
+        <span class="date-number">00</span>
+        <span class="year">0000</span>
+      </div>
+    </div>
 
-
-}
-#date{
-    font-size:large;
-}
-body{
-    background-color: white;
-}
-    </style>
-</head>
-<body>
-    <div id="lbl"></div>
-</body>
-
-<script>
-   const dayNumber = new Date().getDate();
+    <script type="text/javascript">
+    const dayNumber = new Date().getDate();
     const year = new Date().getFullYear();
     const dayName = new Date().toLocaleString("default", {weekday: "long"});
     const monthName = new Date().toLocaleString("default", {month: "long"});
@@ -36,17 +17,4 @@ body{
     document.querySelector(".day-name").innerHTML = dayName;
     document.querySelector(".date-number").innerHTML = dayNumber;
     document.querySelector(".year").innerHTML = year;
-
-    var greet;
-
-    if (hrs < 12)
-        greet = 'Good Morning  ';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon ';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening  ';
-
-    document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
-</script> 
-</html>
+    </script>
