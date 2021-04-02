@@ -1,6 +1,6 @@
 <html> 
 <head>
-    <title>Greeting Message</title> 
+    <title>Date Widget Notion</title> 
     <style>
 #lbl {
     font-family: monospace;
@@ -17,14 +17,30 @@
 #date{
     font-size:large;
 }
-body{
-    background-color: white;
-}
-    </style>
-</head>
 <body>
-    <div id="lbl"></div>
-</body>
+
+    <div class="calendar">
+      <div class="calendar-body">
+        <span class="month-name">Month</span>
+        <span class="day-name">Day</span>
+        <span class="date-number">00</span>
+        <span class="year">0000</span>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    const dayNumber = new Date().getDate();
+    const year = new Date().getFullYear();
+    const dayName = new Date().toLocaleString("default", {weekday: "long"});
+    const monthName = new Date().toLocaleString("default", {month: "long"});
+
+    document.querySelector(".month-name").innerHTML = monthName;
+    document.querySelector(".day-name").innerHTML = dayName;
+    document.querySelector(".date-number").innerHTML = dayNumber;
+    document.querySelector(".year").innerHTML = year;
+    </script>
+
+  </body>
 
 <script>
     var weekday = new Array(7);
