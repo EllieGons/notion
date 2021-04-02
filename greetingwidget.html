@@ -3,11 +3,11 @@
     <title>Greeting Message</title> 
     <style>
 #lbl {
-    font-family: courier;
+    font-family: monospace;
     font-size: xx-large;
-    color: #ff5757;
+    color: #626262;
     padding: 5px;
-    border: transparent;
+    border: 1px solid #ececec;
     text-align: center;
     line-height: 1.5;
     height:85%
@@ -36,9 +36,6 @@ body{
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
-  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("uuuu/MM/dd");
-  LocalDate localDate = LocalDate.now();
-  System.out.println(dtf.format(localDate));
     
     var today = new Date();
     var hrs = today.getHours();
