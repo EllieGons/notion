@@ -6,9 +6,9 @@
         display: flex;
         font-family: monospace;
         font-size: xx-large;
-        color: #626262;
+        color: #ff5757;
         padding: 5px;
-        border: 1px solid #ececec;
+        border: transparent;
         justify-content: center;
         line-height: 1.5;
         height:85%;
@@ -27,7 +27,7 @@
       }
 
       body{
-          background-color: aliceblue;
+          background-color: white;
       }
     </style>
 </head>
@@ -66,7 +66,7 @@
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
-          <div id="date"> It's ${date}</div>
+          <div id="date"> ${date}</div>
           <div class="greeting">${greet}</div>
         <div/>
     `;
