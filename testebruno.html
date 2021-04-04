@@ -5,11 +5,11 @@
       #lbl {
         display: flex;
         font-family: monospace;
-        font-size: xx-large;
-        color: #626262;
+        font-size: x-large;
+        color: #ff5757;
         padding: 5px;
-        border: 1px solid #ececec;
-        justify-content: center;
+        border: 1px solid #ffffff;
+        justify-content: left;
         line-height: 1.5;
         height:85%;
         font-weight: bold;
@@ -27,7 +27,7 @@
       }
 
       body{
-          background-color: aliceblue;
+          background-color: #ffffff;
       }
     </style>
 </head>
@@ -37,16 +37,16 @@
 
 <script>
     var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+    weekday[0] = "sunday";
+    weekday[1] = "monday";
+    weekday[2] = "tuesday";
+    weekday[3] = "wednesday";
+    weekday[4] = "thursday";
+    weekday[5] = "friday";
+    weekday[6] = "saturday";
 
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
+    const monthNames = ["january", "february", "march", "april", "may", "june",
+      "july", "august", "september", "october", "november", "december"
     ];
 
     
@@ -58,11 +58,11 @@
     var greet;
 
     if (hrs < 12)
-        greet = 'Good Morning, Wellida  ';
+        greet = 'good morning, ellie  ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon, Wellida ';
+        greet = 'good afternoon, ellie ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening, Wellida  ';
+        greet = 'good evening, ellie  ';
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
