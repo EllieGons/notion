@@ -1,0 +1,74 @@
+<html> 
+<head>
+    <title>Greeting Message</title> 
+    <style>
+      #lbl {
+        display: flex;
+        font-family: monospace;
+        font-size: xx-large;
+        color: #626262;
+        padding: 5px;
+        border: 1px solid #ececec;
+        justify-content: center;
+        line-height: 1.5;
+        height:85%;
+        font-weight: bold;
+        flex-direction: row;
+      }
+
+      #container {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #date{
+          font-size:large;
+          font-weight: normal;
+      }
+
+      body{
+          background-color: aliceblue;
+      }
+    </style>
+</head>
+<body>
+    <div id="lbl"></div>
+</body>
+
+<script>
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    
+    var today = new Date();
+    var hrs = today.getHours();
+    var dayOfWeek = weekday[today.getDay()];
+    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDay()}, ${today.getFullYear()}`;
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning, Wellida  ';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon, Wellida ';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening, Wellida  ';
+
+    document.getElementById('lbl').innerHTML = `
+        <div class="container">
+          <div id="date"> It's ${date}</div>
+          <div class="greeting">${greet}</div>
+        <div/>
+    `;
+</script> 
+</html>
